@@ -1,0 +1,125 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="WebPages_MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Exposure事务管理系统</title>
+    <link href="../App_Themes/Main/Main.css" rel="stylesheet" type="text/css" />
+    <link href="../App_Themes/font/font-awesome.css" rel="stylesheet" type="text/css" />
+    <script src="../Script/jquery-1.10.2.js" type="text/javascript"></script>
+    <!-- if[IE 7]>
+    <link rel="stylesheet" type="text/css" href="../App_Themes/font/font-awesome-ie7.css" />
+    <![endif]-->
+    <script type="text/javascript">
+        function ShowDialog(FormID) {
+            document.getElementById(FormID).style.display = "block";
+            document.getElementById("FormDivBg").style.display = "block";
+            var maxheight=document.getElementById("FormDivBg").offsetHeight;
+            var bodyheight=document.body.offsetHeight;
+            var divheight=document.getElementById(FormID).offsetHeight+200;
+            if(maxheight<bodyheight)
+            {
+                document.getElementById("FormDivBg").style.height=bodyheight+"px";
+                maxheight=bodyheight;
+            };
+            if(maxheight<divheight)
+            {
+                document.getElementById("FormDivBg").style.height=divheight+"px";
+            };  
+        };
+        function Print_Click() {
+            bdhtml = window.document.body.innerHTML;
+            sprnstr = "<!--startprint-->";
+            eprnstr = "<!--endprint-->";
+            prnhtml = bdhtml.substr(bdhtml.indexOf(sprnstr) + 17);
+            prnhtml = prnhtml.substring(0, prnhtml.indexOf(eprnstr));
+            window.document.body.innerHTML = prnhtml;
+            window.print();
+        };
+        function ImgZoom(obj) {
+            var top=obj.offsetTop;
+            var left=obj.offsetLeft;
+            var src=$(obj).attr("src");
+            while(obj=obj.offsetParent)
+            {
+                    top+=obj.offsetTop;
+                    left+=obj.offsetLeft;
+            };
+            document.getElementById("imgdiv").style.top=top+"px";
+            document.getElementById("imgdiv").style.left="778px";
+            //document.getElementById("imgdiv").style.left=left-126+"px";
+            $("#zoomimg").attr("src",src);
+            $("#imgdiv").show();
+        };
+//        function fullscreenclick() {
+//            $("#View").removeClass;
+//            document.getElementById("View").style="display:abosule;top:0;left:0;width:100%;height:100%;z-index:999; ";
+//        };
+    </script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+<div id="Container" class="Container">
+<div id="Header" class="Header">
+<table style="width:100%">
+<tr>
+<td class="Logo"></td>
+<td class="Title"><span style="font-family:Times New Roman;">Exposure</span><span style="font-family:华文楷体;">事务管理系统</span></td>
+<td class="Personal">
+    <asp:Label ID="LabelDate" runat="server"></asp:Label>
+    <br/>
+    <asp:Label ID="LabelName" runat="server"></asp:Label>
+<%--    <asp:LinkButton ID="EditInfo" runat="server" style="margin:0 5px;" OnClick="Xiugai_Click">[修改密码]</asp:LinkButton>--%>
+    <a style="margin: 0 5px;" href="..\..\WebPages\Index.aspx">[Track系统]</a>
+    <asp:LinkButton ID="LinkButton1" runat="server" OnClick="zhuxiao_Click">[注销]</asp:LinkButton></td>
+</tr>
+</table>
+</div>
+<div id="Menu" class="Menu">
+        <ul>
+            <li><a class="nav" href="Index.aspx">&nbsp;<span style="font-family:fontawesome !important; font-size:large;">&#xf015;</span>&nbsp;</a></li>
+            <li><a class="nav" href="DailyInform.aspx">Daily Inform</a></li>
+            <li><a class="nav" href="ExpIssue.aspx">设备履历</a></li>
+            <li><a class="nav" href="Alarm.aspx">Alarm</a></li>
+            <li><a class="nav" href="Files.aspx">资料管理</a></li>
+            <li><a class="nav" href="UserInfo.aspx" style="border:none;">人员信息</a></li>
+        </ul>
+</div>
+<div id="FormDivBg" class="FormDivBg"></div>
+
+<div style="position:relative; z-index:100;">
+<div id="New_Password" class="FormDiv" style="width:270px;left:358px;">
+<div class="FormTitle">修改密码</div>
+<div class="FormInput">
+<div class="FormBody">
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;旧密码：<asp:TextBox ID="TextBoxOldPW" runat="server" Width="100px" CssClass="TextboxStyle" TextMode="Password"></asp:TextBox></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;新密码：<asp:TextBox ID="TextBoxNewPW" runat="server" Width="100px" CssClass="TextboxStyle" TextMode="Password"></asp:TextBox></p>
+<p>确认新密码：<asp:TextBox ID="TextBoxNewPWAg" runat="server" Width="100px" CssClass="TextboxStyle" TextMode="Password"></asp:TextBox></p>
+ <p><asp:Label ID="ToolTips" runat="server"></asp:Label></p>
+</div>
+</div>
+<div class="FormFooter">
+     <asp:Button ID="PassWord_OK" runat="server" Text="确定" CssClass="ConfirmButton" OnClick="New_PassWord_Click"/>
+     <asp:Button ID="PassWord_Concel" runat="server" Text="取消" CssClass="ConfirmButton" OnClick="Password_Cancel_Click"/>
+</div>
+</div>
+</div>
+
+<div id="MainBody" class="MainBody">
+<asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+</div>
+<div id="Footer" class="Footer">
+<table style="width:100%;">
+<tr>
+<td style="width:60%;text-align:left;">热点链接<a href="http://b03oa01.boe.com.cn" target="_blank">OfficeNet</a><a href="http://mail3.boe.com.cn" target="_blank">BOE_Email</a></td>
+<td style="width:40%;text-align:right;">Copyright &copy 2014 C.S.L. All rights reserved. </td>
+</tr>
+</table>
+</div>
+</div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,130 @@
+﻿body 
+{
+    }
+
+.Container
+{
+    width:960px;
+    height:auto;
+    margin:40px auto;
+}
+.Header
+{
+    width:100%;
+    height:94px;
+    margin:0;
+    padding:0;
+    color:Red;
+    text-align:center;
+    line-height:94px;
+    font-size:50px;
+}
+.Header table
+{
+    width:100%;
+    height:100%;
+    border-collaspe:collape;
+}
+.Logo
+{
+    width:220px;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-image:url(Jdf.png);
+}
+.Tittle
+{
+    height:100%;
+}
+.Main
+{
+    border-bottom: medium solid #808080;
+    border-top: medium solid #808080;    
+}
+.Left
+{
+    width:400px;
+    height:400px;
+    background-image:url(left.jpg);
+    background-position:center;
+    background-repeat:no-repeat;
+}
+.Right
+{
+    vertical-align:middle;
+    text-align:center;
+}
+.tableleft
+{
+    width:40%;
+    height:50px;
+    line-height:50px;
+    text-align:right;
+    font-family:Microsoft Yahei,Arial, Sans-Serif;
+    font-size:20px;
+}
+.tableright
+{
+    height:50px;
+    line-height:50px;
+    width:60%;
+    text-align:left;
+}
+.InputBox
+{
+    height:30px;
+    font-family:Arial;
+    outline:none;
+    font-size:20px;
+    width:130px;
+    padding:0 0 0 10px;
+    line-height:30px;
+    border:solid 1px rgb(0,188,242);
+	border-radius:25px;
+	-moz-border-radius:25px;
+	-webkit-border-radius:25px;
+}
+.LoginButton
+{
+    font-size:20px;
+    font-family:Microsoft Yahei;
+    border:none;
+    width:90px;
+    color:White;
+    background-color:rgb(50,140,220);
+    height:40px;
+    margin:0 5px;
+}
+.LoginButton:hover
+{
+    background-color:rgb(34,120,210);
+}
+.RegistButton
+{
+    font-size:20px;
+    font-family:Microsoft Yahei;
+    border:none;
+    width:90px;
+    color:rgb(109,121,140);
+    background-color:rgb(230,240,250);
+    height:40px;
+    margin:0 5px;
+}
+.RegistButton:hover
+{
+    color:rgb(52,123,199);
+    text-decoration:none;
+	outline:none;
+}
+.Footer
+{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px;
+    height: 50px;
+    clear: both;
+    font-family: Arial;
+    text-align: center;
+    font-size: medium;
+    line-height:50px;
+}
