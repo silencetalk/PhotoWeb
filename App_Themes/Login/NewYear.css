@@ -1,0 +1,61 @@
+﻿body 
+{
+	margin:0;
+	top:0;
+	font-family:Microsoft Yahei;
+	background-color:rgb(205,226,231);
+}
+.container
+{
+	width:960px;
+	margin:20px auto;
+}
+.newyearimg
+{
+	width:100%;
+}
+.login
+{
+	margin:0 auto;
+	border-collaspe:collape;
+	vertical-align:middle;
+}
+.login i
+{
+	height:30px;
+	margin-right:0;
+	padding:0 10px;
+    line-height:30px;
+	color:Gray;
+	background-color:#fff;
+	border:solid 1px rgb(0,188,242);
+	border-right:none;
+}
+.logininput
+{
+	width:130px;
+	height:30px;
+	margin-left:0;
+	margin-right:20px;
+	padding:0 10px;
+    line-height:30px;
+    border:solid 1px rgb(0,188,242);
+    outline:none;
+    font-family:Arial;
+    font-size:20px;
+}
+.loginbtn
+{
+	height:32px;
+	padding:0 10px;
+    line-height:32px;
+    border:solid 1px rgb(0,188,242);
+    background-color:rgb(50,140,220);
+    outline:none;
+    font-size:20px;
+    color:#fff;
+}
+.loginbtn:hover
+{
+	 background-color:rgb(34,120,210);
+}

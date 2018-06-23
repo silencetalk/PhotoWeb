@@ -1,0 +1,548 @@
+﻿body 
+{
+    font-family:Microsoft Yahei,Arial,sans-serif;
+    margin:0px;
+}
+.Container
+{
+	width:1021px;height:auto;margin:0px auto;padding:15px auto;border:none;
+}
+/* 文件头部*/
+.Header
+{
+	width:100%;
+	height:60px;
+	margin:0 auto 10px auto;
+	border:none;
+	padding:0;
+	position:relative;
+	clear:both;
+}
+.Logo
+{
+	width:250px;
+	background-position: left;
+	background-image: url(jdf_logo.jpg);
+    background-repeat: no-repeat;
+}
+.Title
+{
+	width:auto;
+	text-align:center;
+	font-size:30px;
+	font-weight:bold;
+	color:Red;
+	vertical-align:bottom;
+}
+.Personal
+{
+	font-size:12px;
+	width:250px;
+    height:60px;
+	vertical-align:bottom;
+    text-align:right;
+}
+
+/* Menu */
+
+.Menu
+{
+    margin:0;
+	padding:0;
+    width: 100%;
+    height: 30px;
+    border: none;
+	background: #FF76BC;
+}
+.Menu ul 
+{
+padding:0; 
+margin:0;
+width:100%;
+list-style-type: none;
+}
+.Menu ul li
+{
+    float: left;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+.Menu ul li a, .Menu ul li a:visited
+{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    width: 145px;
+    height: 30px;
+    color: #000;
+    border-right: 1px solid #fff;
+    background: #FF76BC;
+    line-height: 30px;
+    font-size: large;
+}
+.Menu ul li:hover a 
+{
+	color:#fff; 
+	background:#00A4A4;
+}
+.Menu ul li ul
+{
+    display: none;
+}
+.Menu ul li:hover ul
+{
+    display: block;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+}
+.Menu ul li:hover ul li a {
+	display:block; 
+	background:#faeec7; 
+	color:#000;
+	border-right:0;
+}
+.Menu ul li:hover ul li a:hover
+{
+    background: #dfc184;
+    color: #000;
+    display: block;
+}
+.nav
+{
+	
+}
+
+/* MainBody */
+
+.MainBody
+{
+width:100%;
+height:auto;
+margin:0;
+padding:0;
+}
+
+/* Footer */
+.Footer
+{
+	width:100%;
+	height:30px;
+	margin:0;
+	padding:0;
+	font-size:12px;
+	background-color:#FF76BC;
+}
+.Footer a
+{
+	font-family:Microsoft Yahei,Arial,sans-serif;
+	font-size:12px;
+	color:#000;
+	margin:0 0 5px 5px;
+	padding:0 0 5px 5px;
+	text-decoration: none;
+}
+.Footer a:hover
+{
+    color:Blue;
+}
+
+/*SubTittle*/
+
+.SubTitle
+{
+    width:100%;
+	height:60px;
+	border-bottom:4px solid #0099FF;
+	margin:0 0 5px 0;
+	padding:0;
+}
+.SubTitleTable
+{
+    width:20%;height:60px;border:none;line-height:60px;font-size:26px;color:rgb(65,65,65);font-family: Microsoft Yahei,Arial,sans-serif;
+}
+.ToolsTable
+{
+    width:80%;height:60px;vertical-align:bottom;
+}
+.Tools
+{
+    width:100%;
+	margin-bottom:10px;
+	height:25px;
+	text-align:right;
+	font-family:Microsoft Yahei,Arial,sans-serif;
+	font-size:0px;
+}
+
+/*ToolButtons*/
+
+.ToolButton
+{
+    height:25px;
+    width:auto;
+    display:inline-block;
+    margin:0px 5px 0px 0px;
+	padding:0 2px 0 2px; 
+	border:none;
+    line-height:25px;
+    cursor:pointer;
+    outline:none;
+    text-decoration:none;
+    color:#000;
+	font-family:Microsoft Yahei,Arial,sans-serif;
+	font-size:13px;
+	background-color:#FF76BC;
+	border-radius:25px;
+	-moz-border-radius:25px;
+	-webkit-border-radius:25px;
+}
+.ToolButton:hover
+{
+    background-color:#00A4A4;
+	color:white;
+}
+.ButtonCycle
+{
+    cursor:pointer;
+	font-family:Microsoft Yahei,Arial,sans-serif;
+	font-size:13px;
+	outline:none;
+	margin:0px 5px 0px 0px;
+	padding:0 2px 0 2px; 
+	height:25px;
+	line-height:25px;
+	border:none;
+	background-color:#FF76BC;
+	border-radius:25px;
+	-moz-border-radius:25px;
+	-webkit-border-radius:25px;
+	width:25px;
+}
+.ButtonCycle:hover
+{
+    background-color:#00A4A4;
+	color:white;
+}
+.ButtonCycle:disabled
+{
+   color:#000;
+    background-color:rgb(0,222,255);
+}
+.ButtonCycle:disabled:hover
+{
+   background-color:rgb(255,52,159);
+	color:white;
+}
+.SearchButton
+{
+    height:25px;
+    width:auto;
+    display:inline-block;
+    margin:0px;
+	padding:0px 5px 0px 5px; 
+    line-height:25px;
+    border:none;
+	border-top-right-radius:25px;
+	border-bottom-right-radius:25px;
+	border-right-radius:25px;
+	-moz-border-top-right-radius:25px;
+	-moz-border-bottom-right-radius:25px;
+	-moz-border-right-radius:25px;
+	-webkit-border-top-right-radius:25px;
+	-webkit-border-bottom-right-radius:25px;
+    -webkit-border-right-radius:25px;
+    cursor:pointer;
+    outline:none;
+    text-decoration:none;
+    color:#000;
+	font-family:Microsoft Yahei,Arial,sans-serif;
+	font-size:14px;
+	background-color:#FF76BC;
+}
+.SearchButton:hover
+{
+    background-color:#00A4A4;
+	color:white;
+}
+
+.ToolInput
+{
+    height:23px;
+    line-height:23px;
+	width:150px;
+	font-family:Microsoft Yahei,Arial,sans-serif;
+	font-size:12px;
+	outline:none;
+	margin: 0px;
+	padding:0px 0px 0px 10px; 
+	border-top:solid 1px rgb(0,222,255);
+	border-bottom:solid 1px rgb(0,222,255);
+	border-left:solid 1px rgb(0,222,255);
+	border-right:none;
+	border-left-radius:25px;
+	border-top-left-radius:25px;
+	border-bottom-left-radius:25px;
+	border-left-radius:25px;
+	-moz-border-top-left-radius:25px;
+	-moz-border-bottom-left-radius:25px;
+	-moz-border-left-radius:25px;
+	-webkit-border-top-left-radius:25px;
+	-webkit-border-bottom-left-radius:25px;
+    -webkit-border-left-radius:25px;
+}
+
+/*Content*/
+.Content
+{
+    width:100%;
+    margin:5px 0 5px 0;
+    padding:0;
+    border:none;
+    height:auto;
+}
+.ContentLeft
+{
+    width:70%;
+    vertical-align:top;
+    border:1px solid rgb(221,221,221);
+    padding:0;
+    margin:0;
+}
+.ContentRight
+{
+    width:30%;
+    vertical-align:top;
+    border:1px solid rgb(221,221,221);
+    padding:0;
+    margin:0;
+}
+.Aside
+{
+    width:100%;
+    margin:0 0 5px 0;
+}
+.DataTitle
+{
+    width:100%;
+    height:25px;
+    line-height:25px;
+    margin:0;
+    padding:0;
+    border:none;
+    background-color:rgb(227,227,227);
+    font-family: Microsoft Yahei,Arial,sans-serif;
+    font-size:15px;
+    text-align:center;
+}
+.DataView
+{
+    width:100%;
+    height:auto;
+    padding:20px 0;
+    border:none;
+    font-family: Microsoft Yahei,Arial,sans-serif;
+    font-size:12px;
+    margin:0;
+}
+
+/*SubMenu*/
+.SubMenu
+{
+    width:100%;
+    text-align:center;
+    height:50px;
+    margin:10px auto 0 auto;
+    padding:0;
+    background-color:rgb(227,227,227);
+    border-top:2px solid rgb(227,227,227);
+}
+.SubView
+{
+    width:1019px;
+    margin:0 auto 10px auto;
+    padding:20px 0px 20px 0px;
+    text-align:center;
+    height:auto;
+    border-left:1px solid rgb(221,221,221);
+    border-right:1px solid rgb(221,221,221);
+    border-bottom:1px solid rgb(221,221,221);
+}
+.View
+{
+	width:98%;
+	margin:0px auto;
+	padding:0px auto;
+	text-align:center;
+	font-size:12px;
+}
+.MenuButton
+{
+	display:inline-block;
+    width:120px;
+    height:50px;
+    line-height:50px;
+    background-color:#FF76BC;
+    color:#000;
+    cursor:pointer;
+	font-family:Microsoft Yahei,Arial,sans-serif;
+	font-size:15px;
+	text-decoration:none;
+	outline:none;
+	border:none;
+	margin: 0 10px 0 0;
+	padding:0;
+}
+.MenuSelected
+{
+    width:120px;
+    height:50px;
+    line-height:50px;
+    background-color:#FFF;
+    color:#000;
+    cursor:pointer;
+	font-family:Microsoft Yahei,Arial,sans-serif;
+	font-size:15px;
+	outline:none;
+	border:none;
+	margin: 0 10px 0 0;
+	padding:0;
+}
+.MenuButton:hover
+{
+	color:White;
+    background-color:#00A4A4;
+}
+
+.ConfirmButton
+{
+    font-size:15px;
+    font-family:Microsoft Yahei;
+    border:none;
+    width:70px;
+    color:#FFF;
+    background-color:#0099FF;
+    height:35px;
+    margin:0px;
+    
+}
+.ConfirmButton:hover
+{
+    background-color:blue;
+}
+/*Form*/
+.FormDivBg
+{
+	position:absolute;
+	top:0;
+	left:0;
+	display:none;
+	padding:0px 0px 0px 0px;
+	width:100%; 
+	height:100%;
+	z-index:100;
+	background-color:#99ffff;
+	filter:alpha(opacity=60);
+	opacity:0.6;	
+}
+.FormDiv
+{
+	width:500px;height:auto;border:1px solid #0066FF;margin:10px;position:absolute;font-family: Microsoft Yahei,Arial,sans-serif;z-index:200;display:none;top:0px;left:238px;
+}
+.FormTitle
+{
+	width:100%; height:25px;line-height:25px;margin:0;padding:5px 0px;border:none;background-color:#0099FF;font-size:15px;text-align:center;
+}
+.FormInput
+{
+  width:100%; height:auto;margin:0;padding:0 0 10px 0; background-color:#FFF;
+}
+.FormBody
+{
+    width:80%;
+    height:auto;
+    margin:0 auto;
+    padding:0;
+    font-size:12px;
+    font-family: Microsoft Yahei,Arial,sans-serif;
+}
+.FormBody p
+{
+    margin:0;
+    padding:10px 0 0 0;
+}
+.FormFooter
+{
+    width:100%; height:35px;line-height:25px;margin:0;padding:0px;border:none;background-color:#0099FF;font-size:15px;text-align:center;
+}
+
+/*Calendar*/
+
+.Calendar
+{
+	position:absolute;
+	display:none;
+	top:60px;
+	left:360px;
+}
+
+/*Input*/
+
+.InputStyle
+{
+	margin :0px 0px 0px 5px;
+	padding:0px;
+	height:21px;
+	font-family:Microsoft Yahei,Arial,sans-serif;
+	font-size:12px;
+}
+
+.TextboxStyle
+{
+	margin :0px 0px 0px 5px;
+	padding:0px;
+	height:17px;
+	font-family:Microsoft Yahei,Arial,sans-serif;
+	font-size:12px;
+}
+.fontlink
+{
+    color:rgb(0,222,255);
+    text-decoration:none;
+}
+.fontlink:hover
+{
+    color:#0055FF;
+}
+
+.zoomimg
+{
+	 position:absolute;
+	 display:none;
+	 z-index:90;
+	 width:417px;
+	 height:312px;
+	 margin:0px auto;
+	 padding:0px auto;
+	 border:none;
+	 cursor:url(../App_Themes/Main/small.cur);
+}
+
+.news
+{
+	display:none;
+	position:absolute;
+	top:0px;
+	width:300px;
+	height:25px;
+	line-height:25px;
+	color:#FFFFFF;
+	text-align:center;
+	background-color:rgb(0,175,232);
+}
+.news:hover
+{
+	background-color:#0099FF;
+}
