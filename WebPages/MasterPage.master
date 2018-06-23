@@ -1,0 +1,146 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="WebPages_MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Track 事务管理系统</title>
+    <link href="../App_Themes/Main/Main.css" rel="stylesheet" type="text/css" />
+    <link href="../App_Themes/font/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../App_Themes/font/font-awesome-ie7.css" />
+    <script src="../Script/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="../Script/dialog.js" type="text/javascript"></script>
+    <script src="../My97DatePicker/WdatePicker.js" type="text/javascript"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="Container" class="Container">
+        <div id="Header" class="Header">
+            <table style="width: 100%">
+                <tr>
+                    <td class="Logo">
+                    </td>
+                    <td class="Title">
+                        <span style="font-family: 微软雅黑;">Track</span><span style="font-family: 微软雅黑;">事务管理系统</span>
+                    </td>
+                    <td class="Personal">
+                        <asp:Label ID="LabelDate" runat="server"></asp:Label>
+                        <br />
+                        <asp:Label ID="Lb_Welcome" runat="server"></asp:Label>
+                        <asp:LinkButton ID="EditInfo" runat="server" Style="margin: 0 5px;" OnClick="Xiugai_Click">[修改密码]</asp:LinkButton>
+                        <!--<a style="margin: 0 5px;" href="..\Exposure\WebPages\DailyInform.aspx">[Exposure系统]</a>-->
+                        <asp:LinkButton ID="LinkButton1" runat="server" OnClick="Exit_Click">[注销]</asp:LinkButton>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="Menu" class="Menu">
+            <ul style="color: #FF0000">
+                <li><a href="Index.aspx">&nbsp;<span style="font-family: fontawesome !important;
+                    font-size: large;">&#xf015;</span></a></li>
+                <li><a href="DailyInform.aspx"> 工作交接</a></li>
+                <li><a href="Alarm.aspx">设备履历</a></li>
+                <li><a href="PM.aspx">PM & Parts</a></li>
+                <li><a href="AOI.aspx">Daily Monitor</a></li>
+                <%--<li><a href="AllItem.aspx">平行展开项目</a></li>--%>
+                <li><a href="Files.aspx">资料管理</a></li>
+                <li><a href="UserInfo.aspx" style="border: none;">联系信息</a></li>
+            </ul>
+        </div>
+        <div id="FormDivBg" class="FormDivBg">
+        </div>
+        <div id="MainBody" class="MainBody">
+            <div style="position: relative; z-index: 100;">
+                <div id="New_Password" class="FormDiv">
+                    <div class="FormTitle">
+                        修改密码</div>
+                    <div class="FormInput">
+                        <div class="FormBody">
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;旧密码：<asp:TextBox ID="TextBoxOldPW" runat="server"
+                                    Width="100px" CssClass="TextboxStyle" TextMode="Password"></asp:TextBox></p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;新密码：<asp:TextBox ID="TextBoxNewPW" runat="server"
+                                    Width="100px" CssClass="TextboxStyle" TextMode="Password"></asp:TextBox></p>
+                            <p>
+                                确认新密码：<asp:TextBox ID="TextBoxNewPWAg" runat="server" Width="100px" CssClass="TextboxStyle"
+                                    TextMode="Password"></asp:TextBox></p>
+                            <p>
+                                <asp:Label ID="ToolTips" runat="server"></asp:Label></p>
+                        </div>
+                    </div>
+                    <div class="FormFooter">
+                        <asp:Button ID="PassWord_OK" runat="server" Text="确定" CssClass="ConfirmButton" OnClick="New_PassWord_Click" />
+                        <asp:Button ID="PassWord_Concel" runat="server" Text="取消" CssClass="ConfirmButton"
+                            OnClick="Password_Cancel_Click" />
+                    </div>
+                </div>
+            </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div id="Footer" class="Footer">
+            <table style="width: 100%; height: 100%;">
+                <tr>
+                    <td style="width: 60%; text-align: left;">
+                        热点链接<a href="http://portal.boe.com.cn" target="_blank">门户</a><a href="http://b05oa01.boe.com.cn" target="_blank">OfficeNet</a><a href="http://mail.boe.com.cn"
+                            target="_blank">BOE邮箱</a>
+                    </td>
+                    <td style="width: 40%; text-align: right;">
+                        Copyright &copy 2018 BOE All rights reserved.
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <%-- <div id="logo" class="logo"><a href="Index.aspx">Track</a></div>
+    <table id="layout" class="layout">
+        <tr>
+            <td id="left" class="left">
+                <div class="menu">
+                    <div class="userinfo">
+                        <h1>
+                            您好,<asp:Label ID="Lb_Welcome" runat="server" Text="Label"></asp:Label></h1>
+                        <h3>
+                            <a class="userbtn" id="edit_info"><i class="icon-key"></i>修改资料</a>
+                            <asp:LinkButton ID="Btn_Exit" runat="server" OnClick="Exit_Click" CssClass="userbtn"><i class="icon-signout"></i>退出</asp:LinkButton></h3>
+                    </div>
+                    <div class="nav">
+                        <a class="menubtn" href="DailyInform.aspx"><i class="icon-laptop"></i>Daily Work</a>
+                        <ul>
+                            <li><a href="DailyInform.aspx">Inform</a></li>
+                            <li><a href="#">Monitor</a></li>
+                        </ul>
+                        <a class="menubtn" href="#"><i class="icon-warning-sign"></i>设备状况</a>
+                        <ul>
+                            <li><a href="Alarm.aspx">Alarm</a></li>
+                            <li><a href="PMState.aspx">PM</a></li>
+                        </ul>
+                        <a class="menubtn" href="#"><i class="icon-folder-open-alt"></i>资料管理</a>
+                        <ul>
+                            <li><a href="Files.aspx">最新资料</a></li>
+                            <li><a href="#">文档归档</a></li>
+                        </ul>
+                        <a class="menubtn" href="#"><i class="icon-user"></i>人员信息</a>
+                        <ul>
+                            <li><a href="#">科室人员</a></li>
+                            <li><a href="#">公司人员</a></li>
+                            <li><a href="#">厂商人员</a></li>
+                        </ul>
+                    </div>
+                    <div class="copyright">
+                        Copyright&nbsp;&copy;&nbsp;2014&nbsp;CSL</div>
+                </div>
+            </td>
+            <td class="right"> 
+                <div class="page">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </td>
+        </tr>
+    </table>--%>
+    </form>
+</body>
+</html>
