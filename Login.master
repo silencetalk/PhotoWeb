@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Login.master.cs" Inherits="Login" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Track 事务管理系统</title>
+    <link href="App_Themes/Login/Login.css" rel="stylesheet" type="text/css" />
+    <link href="App_Themes/font/font-awesome.css" rel="stylesheet" type="text/css" />
+    <!-- if[IE 7]>
+    <link rel="stylesheet" type="text/css" href="App_Themes/font/font-awesome-ie7.css" />
+    <![endif]-->
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+<div id="Container" class="Container">
+<div id="Header" class="Header">
+<table>
+<tr>
+<td class="Logo"></td>
+<td class="Tittle"><span style="font-family:微软雅黑">Track</span><span style="font-family:微软雅黑;">事务管理系统</span></td>
+</tr>
+</table>
+</div>
+<div id="Main" class="Main">
+<table style="width:100%;height:auto;border-collaspe:collape;">
+<tr>
+<td class="Left"></td>
+<td class="Right"><asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder></td>
+</tr>
+</table>
+</div>
+<div id="Footer" class="Footer">Copyright &copy 2018 BOE All Rights Reserved.</div>
+</div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,52 @@
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+    }
+    protected void PreDate_Click(object sender, EventArgs e)
+    {
+
+    }
+    protected void SetDate_Click(object sender, EventArgs e)
+    {
+
+    }
+    protected void NextDate_Click(object sender, EventArgs e)
+    {
+
+    }
+    protected void Add_Click(object sender, EventArgs e)
+    {
+        Page.ClientScript.RegisterStartupScript(this.GetType(), "", "<script> ShowDialog('Add_Dialog');</script>");
+    }
+    protected void Edit_Click(object sender, EventArgs e)
+    {
+
+    }
+    protected void Delete_Click(object sender, EventArgs e)
+    {
+
+    }
+    protected void Search_Click(object sender, EventArgs e)
+    {
+
+    }
+    protected void Add_OK_Click(object sender, EventArgs e)
+    {
+
+    }
+    protected void Add_Cancel_Click(object sender, EventArgs e)
+    {
+
+    }
+    protected void AOI_Click(object sender, EventArgs e)
+    {
+
+    }
+    protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
+    {
+
+    }
+    protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
+    {
+
+    }
